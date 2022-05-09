@@ -14,22 +14,24 @@ import {
   widthPercentageToDP as wp,
 } from 'react-native-responsive-screen';
 
-export default function InputField({label}) {
+export default function InputField({label, value}) {
   return (
     <View style={{paddingHorizontal: wp(5), marginVertical: hp(1)}}>
       <Text style={{color: Colors.white, fontSize: 17, fontWeight: '600'}}>
         {label}
       </Text>
-      <TextInput
+      <View
         style={{
           marginTop: hp(0.8),
           backgroundColor: 'rgba(52, 52, 52, 0.8)',
           height: hp(5.5),
           borderRadius: 7,
           paddingHorizontal: wp(2),
-          color: Colors.gray,
-        }}
-      />
+
+          justifyContent: 'center',
+        }}>
+        <Text style={{color: Colors.gray}}>{value}</Text>
+      </View>
     </View>
   );
 }

@@ -13,6 +13,7 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
+import {useNavigation} from '@react-navigation/native';
 import React, {useState} from 'react';
 import Colors from '../constants/Colors';
 import AppText from '../components/AppText';
@@ -38,6 +39,7 @@ const SECTIONS = [
 ];
 
 const Witaj = () => {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <StatusBar backgroundColor={Colors.primary} />
@@ -80,34 +82,36 @@ const Witaj = () => {
       <View style={{alignItems: 'center', marginVertical: hp(2)}}>
         <Image source={require('../assets/icons/Witaj.png')} />
       </View>
-      <View
-        style={{
-          width: wp(70),
-          height: hp(5),
-          borderRadius: 6,
-          flexDirection: 'row',
-          justifyContent: 'space-evenly',
-          alignItems: 'center',
-          alignSelf: 'center',
-          backgroundColor: 'rgba(85, 193, 66, 0.14901960784313725)',
-        }}>
-        <Text style={{color: Colors.white, fontSize: 18, fontWeight: '700'}}>
-          1185
-        </Text>
-        <AppText
-          size={2.2}
-          fontWeight={'700'}
-          style={{color: '#16491f', marginRight: wp(2)}}>
-          Aktualnie online graczy
-        </AppText>
-      </View>
+      <TouchableOpacity onPress={() => navigation.navigate('Servers')}>
+        <View
+          style={{
+            width: wp(70),
+            height: hp(5),
+            borderRadius: 6,
+            flexDirection: 'row',
+            justifyContent: 'space-evenly',
+            alignItems: 'center',
+            alignSelf: 'center',
+            backgroundColor: 'rgba(85, 193, 66, 0.14901960784313725)',
+          }}>
+          <Text style={{color: Colors.white, fontSize: 18, fontWeight: '700'}}>
+            1185
+          </Text>
+          <AppText
+            size={2.2}
+            fontWeight={'700'}
+            style={{color: '#16491f', marginRight: wp(2)}}>
+            Aktualnie online graczy
+          </AppText>
+        </View>
+      </TouchableOpacity>
       <View
         style={{
           flexDirection: 'row',
           justifyContent: 'center',
           marginTop: hp(2),
         }}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Form')}>
           <View
             style={{
               width: wp(50),
@@ -122,7 +126,7 @@ const Witaj = () => {
             </Text>
           </View>
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Market')}>
           <View
             style={{
               width: wp(30),

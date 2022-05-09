@@ -12,7 +12,6 @@ export default function Header() {
     <View
       style={{
         height: hp(100),
-        paddingHorizontal: wp(5),
         backgroundColor: Colors.primary,
       }}>
       <Image

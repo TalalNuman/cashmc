@@ -50,11 +50,11 @@ export default function InputScreen() {
             borderRadius: 6,
           }}>
           <View>
-            <InputField label={'Poziom kopania'} />
-            <InputField label={'Wykopane bloki'} />
-            <InputField label={'Stan konta'} />
-            <InputField label={'Łącznie online'} />
-            <InputField label={'Ranga'} />
+            <InputField label={'Poziom kopania'} value={'lvl 69'} />
+            <InputField label={'Wykopane bloki'} value={'53592966 bloków'} />
+            <InputField label={'Stan konta'} value={'30,00 PLN'} />
+            <InputField label={'Łącznie online'} value={'1504 godzin'} />
+            <InputField label={'Ranga'} value={'BOGACZ'} />
           </View>
         </View>
       </View>

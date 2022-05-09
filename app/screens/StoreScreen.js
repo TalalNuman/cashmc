@@ -117,7 +117,7 @@ const NewScreen = () => {
       </View>
       <View style={styles.main}>
         <Text style={styles.textb}>Sklep Serwera</Text>
-        <View style={{marginTop: hp('2%'), height: hp('60%')}}>
+        <View style={{marginTop: hp('2%'), height: hp('65%')}}>
           <FlatList
             data={Data}
             numColumns={2}
@@ -219,7 +219,7 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 30,
     backgroundColor: '#292428',
     marginTop: hp('5%'),
-    height: hp('75'),
+    height: hp('80%'),
   },
   textb: {
     fontSize: 18,
